@@ -1,4 +1,8 @@
 import express from 'express';
+import 'reflect-metadata';
+
+import './database/connect';
+
 import { router } from './routes';
 
 
