@@ -8,19 +8,19 @@ class User {
 
   @Column()
   nome: string;
-//
-//  @Column()
-//  cidade: string;
-//
-//  @Column()
-//  uf: string;
-//
-//  @Column()
-//  ddd: number;
-//
+
+  @Column()
+  cidade: string;
+
+  @Column()
+  uf: string;
+
+  @Column()
+  ddd: number;
+
 //  @BeforeInsert()
 //  @BeforeUpdate()
-//  
+  
 //  @CreateDateColumn()
 //  created_at: Date;
 
