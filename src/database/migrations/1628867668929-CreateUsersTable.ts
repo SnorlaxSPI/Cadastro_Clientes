@@ -1,6 +1,6 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class CreateUsersTable1628780779089 implements MigrationInterface {
+export class CreateUsersTable1628867668929 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"');
@@ -18,29 +18,28 @@ export class CreateUsersTable1628780779089 implements MigrationInterface {
               {
                 name: "nome",
                 type: "varchar",
-                isUnique: true,
-              },
+              }
 
-              {
-                name: "cidade",
-                type: "varchar",
-              },
-
-              {
-                name: "uf",
-                type: "varchar",
-              },
-
-              {
-                name: "ddd",
-                type: "varchar",
-              },
-
-              {
-                name: "created_at",
-                type: "timestamp",
-                default: 'now()'
-              },
+//              {
+//                name: "cidade",
+//                type: "varchar",
+//              },
+//
+//              {
+//                name: "uf",
+//                type: "varchar",
+//              },
+//
+//              {
+//                name: "ddd",
+//                type: "varchar",
+//              },
+//
+//              {
+//                name: "created_at",
+//                type: "timestamp",
+//                default: 'now()'
+//              },
             ],
           })
         );
@@ -48,6 +47,6 @@ export class CreateUsersTable1628780779089 implements MigrationInterface {
 
     public async down(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.dropTable("users");
-         await queryRunner.query('DROP EXTENSION "uuid-ossp"');
+      await queryRunner.query('DROP EXTENSION "uuid-ossp"');
     }
 }
