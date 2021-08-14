@@ -1,6 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, BeforeInsert, BeforeUpdate } from 'typeorm';
 
 @Entity('users')
+
 class User {
 
   @PrimaryGeneratedColumn('uuid')
@@ -10,13 +11,13 @@ class User {
   nome: string;
 
   @Column()
+  email: string;
+
+  @Column()
   cidade: string;
 
   @Column()
-  uf: string;
-
-  @Column()
-  ddd: number;
+  uf: number;
 
 //  @BeforeInsert()
 //  @BeforeUpdate()

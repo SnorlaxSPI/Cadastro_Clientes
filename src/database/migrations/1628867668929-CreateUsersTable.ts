@@ -21,19 +21,21 @@ export class CreateUsersTable1628867668929 implements MigrationInterface {
               },
 
               {
+                name: "email",
+                type: "varchar",
+                isUnique: true,
+              },
+
+              {
                 name: "cidade",
                 type: "varchar",
               },
 
               {
-                name: "uf",
-                type: "varchar",
+                name: 'uf',
+                type: 'varchar',
               },
 
-              {
-                name: "ddd",
-                type: "varchar",
-              },
 //
 //             {
 //               name: "created_at",
